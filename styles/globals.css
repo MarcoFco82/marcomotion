@@ -77,11 +77,44 @@ body {
   text-decoration: none;
   color: #3b424c; /* Color oscuro para contrastar con el fondo del menú */
   font-weight: bold;
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Esconde el desbordamiento */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si es necesario */
 }
 
 .menu-horizontal a:hover {
   color: #f69336;
 }
+
+
+.banner-superior, .banner-menu {
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+}
+
+@media (max-width: 768px) {
+  .menu-horizontal {
+    flex-direction: column; /* Cambia a un diseño vertical */
+    gap: 10px; /* Reduce el espacio entre los elementos */
+  }
+
+  .menu-horizontal li {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra los enlaces */
+  }
+  .banner-superior h1 {
+    font-size: 1.5em; /* Reduce el tamaño de la fuente */
+  }
+
+  .banner-menu {
+    padding: 10px; /* Ajusta el padding */
+  }
+
+  .menu-horizontal a {
+    font-size: 0.9em; /* Reduce el tamaño del texto */
+  }
+}
+
 
 /* Contenedor principal */
 .content {
@@ -91,10 +124,12 @@ body {
 
 
 /* Contenido principal */
-.contenido-principal {
-  flex: 1;
-  padding: 20px;
+
+.container, .contenido-principal {
+  padding: 0 15px; /* Agrega espacio en los lados */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
 }
+
 
 /* Banner inferior */
 .banner-inferior {

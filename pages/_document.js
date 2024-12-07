@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         {/* Meta Tags Generales */}
         <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Sitio profesional de Marco Ramos, especializado en Motion Graphics, 3D, e Interactive Design." />
         <meta name="keywords" content="Motion Graphics, 3D, Interactive Design, Motion Graphics Designer, Diseño Gráfico, Web Interactiva, Animación, Portafolio, Animador" />
         <meta name="author" content="Marco Ramos" />
